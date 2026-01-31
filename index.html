@@ -334,25 +334,39 @@
          MOBILE FIX FOR EXPERT TEAM IMAGE & ANIMATIONS
          ================================================== */
       /* EXPERT TEAM IMAGE MOBILE FIX */
-      @media (max-width: 768px) {
+      /* Expert Team Image Styling (like Why Choose Us) */
+      .expert-img-css {
+        width: 100%;
+        max-width: 800px;
+        /* same max width as Why Choose Us */
+        height: auto;
+        position: relative;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
 
-        .animate-left,
-        .animate-right {
+      /* Hover Effect */
+      .expert-img-css:hover {
+        transform: scale(1.05);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Desktop adjustments */
+      @media (min-width: 992px) {
+        .expert-img-css {
+          max-width: 800px;
+        }
+      }
+
+      /* Mobile reset */
+      @media (max-width: 768px) {
+        .expert-img-css {
+          max-width: 100%;
+          top: 0;
+          left: 0;
+          display: block !important;
           opacity: 1 !important;
           transform: none !important;
-          margin-bottom: 20px;
-        }
-
-        .animate-left img,
-        .animate-right img {
-          width: 100%;
-          height: auto;
-          display: block !important;
-          max-height: none;
-        }
-
-        .row.align-items-center {
-          align-items: flex-start !important;
+          /* remove any animation offsets */
         }
       }
     </style>
