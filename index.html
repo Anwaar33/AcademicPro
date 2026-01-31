@@ -333,18 +333,26 @@
       /* ==================================================
          MOBILE FIX FOR EXPERT TEAM IMAGE & ANIMATIONS
          ================================================== */
+      /* EXPERT TEAM IMAGE MOBILE FIX */
       @media (max-width: 768px) {
 
         .animate-left,
         .animate-right {
-          margin-bottom: 20px;
+          opacity: 1 !important;
           transform: none !important;
+          margin-bottom: 20px;
         }
 
         .animate-left img,
         .animate-right img {
           width: 100%;
           height: auto;
+          display: block !important;
+          max-height: none;
+        }
+
+        .row.align-items-center {
+          align-items: flex-start !important;
         }
       }
     </style>
@@ -512,7 +520,7 @@
 
         <!-- Image Left -->
         <div class="col-12 col-md-6 text-center">
-          <img src="images/expertTeam.jpg" class="img-fluid rounded animate-left" alt="Quality Writing">
+          <img src="images/expertTeam.jpg" class="img-fluid rounded animate-left d-block" alt="Quality Writing">
         </div>
 
 
